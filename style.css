@@ -46,7 +46,6 @@ textarea {
   z-index: 20;
   top: 0;
   left: 0;
-
   width: 100%;
   height: 78px;
 
@@ -75,7 +74,6 @@ textarea {
 .logo {
   display: flex;
   flex-direction: column;
-
   letter-spacing: 0.18em;
   line-height: 1.1;
 }
@@ -87,7 +85,6 @@ textarea {
 
 .logo small {
   margin-top: 5px;
-
   font-size: 8px;
   letter-spacing: 0.42em;
 }
@@ -98,7 +95,6 @@ textarea {
 .nav {
   display: flex;
   align-items: center;
-
   gap: 26px;
 
   font-size: 11px;
@@ -120,11 +116,10 @@ textarea {
 }
 
 
-/* MOBILE MENU BUTTON */
+/* MOBILE MENU */
 
 .menu-button {
   display: none;
-
   width: 40px;
 
   background: none;
@@ -134,16 +129,14 @@ textarea {
 
 .menu-button span {
   display: block;
-
   height: 1px;
   margin: 7px 0;
-
   background: currentColor;
 }
 
 
 /* ==================================================
-   HERO
+   HERO / TOP
 ================================================== */
 
 .hero {
@@ -166,7 +159,7 @@ textarea {
 }
 
 
-/* 写真の上にグラデーションを重ねて文字を読みやすくする */
+/* TOP画像の上に暗いグラデーション */
 
 .hero::before {
   content: "";
@@ -174,13 +167,12 @@ textarea {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      90deg,
-      rgba(0, 0, 0, 0.58) 0%,
-      rgba(0, 0, 0, 0.30) 45%,
-      rgba(0, 0, 0, 0.06) 75%
-    );
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.58) 0%,
+    rgba(0, 0, 0, 0.30) 45%,
+    rgba(0, 0, 0, 0.06) 75%
+  );
 }
 
 .hero-copy {
@@ -195,7 +187,6 @@ textarea {
 
   font-size: 10px;
   letter-spacing: 0.3em;
-
   text-transform: uppercase;
 }
 
@@ -209,7 +200,6 @@ textarea {
 
   font-size: clamp(48px, 7vw, 92px);
   font-weight: 500;
-
   line-height: 1.25;
 }
 
@@ -223,9 +213,6 @@ textarea {
   font-size: 14px;
   letter-spacing: 0.08em;
 }
-
-
-/* SCROLL INDICATOR */
 
 .hero-scroll {
   position: absolute;
@@ -304,7 +291,6 @@ textarea {
 
 .intro {
   padding: 150px 12vw;
-
   text-align: center;
 }
 
@@ -323,7 +309,6 @@ textarea {
 
   font-size: clamp(35px, 5vw, 60px);
   font-weight: 500;
-
   line-height: 1.4;
 }
 
@@ -339,7 +324,7 @@ textarea {
 
 
 /* ==================================================
-   COMMON TWO COLUMN SECTION
+   COMMON SECTION
 ================================================== */
 
 .section {
@@ -368,7 +353,6 @@ textarea {
 
 .section-copy p:not(.eyebrow) {
   max-width: 520px;
-
   font-size: 14px;
 }
 
@@ -381,24 +365,22 @@ textarea {
 
 
 /* ==================================================
-   CONCEPT IMAGE
+   CONCEPT
 ================================================== */
 
 /*
-   concept.png
-   エントランス・沖縄の植栽・シーサーの画像
+   ★ concept.png.png を表示
 */
 
 .image-architecture {
-  background-image: url("concept.png");
+  background-image: url("concept.png.png");
+  background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
 }
 
 
-/*
-   写真自体に文字を入れないため、
-   CONCEPTラベルだけHTML側のデザインとして残す
-*/
+/* CONCEPTラベル */
 
 .image-label {
   position: absolute;
@@ -413,7 +395,6 @@ textarea {
 
   font-family: "Playfair Display", serif;
   font-size: 22px;
-
   letter-spacing: 0.12em;
 
   backdrop-filter: blur(5px);
@@ -431,18 +412,14 @@ textarea {
 
 
 /*
-   interior.png
-   海を望むリビング・ダイニング・キッチン
+   ★ interior.png.png を表示
 */
 
 .image-interior {
-  background-image: url("interior.png");
-
-  /*
-     リビングとキッチンがバランスよく
-     見えるよう少し中央寄りに調整
-  */
+  background-image: url("interior.png.png");
+  background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
 }
 
 
@@ -466,7 +443,6 @@ textarea {
   font-family: "Playfair Display", serif;
   font-size: 42px;
   font-weight: 500;
-
   line-height: 1;
 }
 
@@ -485,13 +461,11 @@ textarea {
 .plan,
 .equipment {
   display: block;
-
   padding: 140px 8vw;
 }
 
 .section-heading {
   max-width: 720px;
-
   margin-bottom: 60px;
 }
 
@@ -502,7 +476,6 @@ textarea {
 .plans {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   gap: 22px;
 }
 
@@ -513,7 +486,6 @@ textarea {
   background: none;
 
   text-align: left;
-
   cursor: pointer;
 }
 
@@ -525,16 +497,13 @@ textarea {
   overflow: hidden;
 
   border: 1px solid #aaa;
-
   background: #fff;
 }
 
 .floorplan::before,
 .floorplan::after {
   content: "";
-
   position: absolute;
-
   background: #555;
 }
 
@@ -607,7 +576,6 @@ textarea {
   box-shadow: -100px 0 #555;
 }
 
-
 .floorplan span {
   position: absolute;
   z-index: 1;
@@ -620,7 +588,7 @@ textarea {
 }
 
 
-/* PLAN INFORMATION */
+/* PLAN INFO */
 
 .plan-info {
   display: grid;
@@ -645,7 +613,6 @@ textarea {
 
   font-style: normal;
   font-size: 10px;
-
   letter-spacing: 0.15em;
 }
 
@@ -703,17 +670,16 @@ textarea {
 .location-map {
   position: relative;
 
-  background:
-    linear-gradient(
-      135deg,
-      #d9d5c9 0 15%,
-      #aeb4aa 15% 17%,
-      #e0ddd3 17% 35%,
-      #b8beb5 35% 37%,
-      #dedbd0 37% 60%,
-      #a9afa5 60% 62%,
-      #e0ddd3 62%
-    );
+  background: linear-gradient(
+    135deg,
+    #d9d5c9 0 15%,
+    #aeb4aa 15% 17%,
+    #e0ddd3 17% 35%,
+    #b8beb5 35% 37%,
+    #dedbd0 37% 60%,
+    #a9afa5 60% 62%,
+    #e0ddd3 62%
+  );
 }
 
 .location-map::after {
@@ -784,7 +750,7 @@ textarea {
 
 
 /* ==================================================
-   PROJECT INFORMATION / CTA
+   PROJECT INFORMATION
 ================================================== */
 
 .cta-band {
@@ -922,7 +888,6 @@ textarea {
   top: 15px;
 
   border: 0;
-
   background: none;
 
   font-size: 30px;
@@ -1052,10 +1017,6 @@ textarea {
   .hero {
     padding: 0 8vw;
 
-    /*
-       スマホで建物が切れすぎないよう
-       表示位置を調整
-    */
     background-position: 58% center;
   }
 
@@ -1064,12 +1025,11 @@ textarea {
   }
 
   .hero::before {
-    background:
-      linear-gradient(
-        90deg,
-        rgba(0, 0, 0, 0.62),
-        rgba(0, 0, 0, 0.18)
-      );
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.62),
+      rgba(0, 0, 0, 0.18)
+    );
   }
 
 
@@ -1091,14 +1051,14 @@ textarea {
   }
 
 
-  /* CONCEPT IMAGE */
+  /* CONCEPT */
 
   .image-architecture {
     background-position: 65% center;
   }
 
 
-  /* INTERIOR IMAGE */
+  /* DESIGN */
 
   .image-interior {
     background-position: 48% center;
