@@ -1129,3 +1129,41 @@ textarea {
 .map-pin {
   display: none;
 }
+
+/* ==================================================
+   LOCATION MAP SIZE FIX
+================================================== */
+
+.location-map {
+  min-height: 650px;
+
+  background-image: url("location-map.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #f3f0e8;
+}
+
+.location-map::after {
+  display: none;
+}
+
+.map-pin {
+  display: none;
+}
+
+
+/* スマホ */
+
+@media (max-width: 800px) {
+
+  .location-map {
+    min-height: 500px;
+
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+}
