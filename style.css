@@ -1167,3 +1167,34 @@ textarea {
   }
 
 }
+
+/* ==================================================
+   LOCATION MAP FINAL FIX
+================================================== */
+
+.location-map {
+  min-height: 650px !important;
+
+  background-image: url("location-map.png") !important;
+  background-size: contain !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+
+  background-color: #f3f0e8 !important;
+}
+
+.location-map::after {
+  display: none !important;
+}
+
+.map-pin {
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  .location-map {
+    min-height: 500px !important;
+    background-size: contain !important;
+    background-position: center !important;
+  }
+}
