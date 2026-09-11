@@ -1104,3 +1104,28 @@ textarea {
   height: auto;
   object-fit: contain;
 }
+/* ==================================================
+   LOCATION MAP IMAGE
+================================================== */
+
+.location-map {
+  min-height: 650px;
+
+  background-image: url("location-map.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 今までの仮マップ装飾を消す */
+
+.location-map::after {
+  display: none;
+}
+
+/* 画像自体に物件名が入っているので
+   HTML側の黒いピン表示を非表示にする */
+
+.map-pin {
+  display: none;
+}
