@@ -60,17 +60,21 @@ textarea {
   color: #fff;
 
   backdrop-filter: blur(8px);
+
   transition: 0.3s;
 }
 
 .header.scrolled {
   background: rgba(247, 245, 240, 0.96);
   color: #222;
+
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.08);
 }
 
 
-/* LOGO */
+/* ==================================================
+   LOGO
+================================================== */
 
 .logo {
   display: flex;
@@ -93,7 +97,9 @@ textarea {
 }
 
 
-/* NAVIGATION */
+/* ==================================================
+   NAVIGATION
+================================================== */
 
 .nav {
   display: flex;
@@ -107,6 +113,7 @@ textarea {
 
 .nav a {
   opacity: 0.9;
+
   transition: opacity 0.25s;
 }
 
@@ -116,19 +123,23 @@ textarea {
 
 .nav-cta {
   padding: 8px 18px;
+
   border: 1px solid currentColor;
 }
 
 
-/* MOBILE MENU */
+/* ==================================================
+   MOBILE MENU
+================================================== */
 
 .menu-button {
   display: none;
 
   width: 40px;
 
-  background: none;
   border: 0;
+  background: none;
+
   color: inherit;
 
   cursor: pointer;
@@ -176,7 +187,7 @@ textarea {
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 0.58) 0%,
-    rgba(0, 0, 0, 0.3) 45%,
+    rgba(0, 0, 0, 0.30) 45%,
     rgba(0, 0, 0, 0.06) 75%
   );
 }
@@ -207,6 +218,7 @@ textarea {
 
   font-size: clamp(48px, 7vw, 92px);
   font-weight: 500;
+
   line-height: 1.25;
 }
 
@@ -258,6 +270,7 @@ textarea {
   gap: 35px;
 
   min-width: 180px;
+
   padding: 13px 20px;
 
   border: 1px solid #222;
@@ -278,16 +291,19 @@ textarea {
 
 .button:hover {
   transform: translateY(-2px);
+
   opacity: 0.8;
 }
 
 .button-light {
   color: #fff;
+
   border-color: #fff;
 }
 
 .button-dark {
   background: #222;
+
   color: #fff;
 }
 
@@ -298,6 +314,7 @@ textarea {
 
 .intro {
   padding: 150px 12vw;
+
   text-align: center;
 }
 
@@ -316,11 +333,13 @@ textarea {
 
   font-size: clamp(35px, 5vw, 60px);
   font-weight: 500;
+
   line-height: 1.4;
 }
 
 .intro h2 span {
   font-family: "Noto Sans JP", sans-serif;
+
   font-size: 0.65em;
   font-weight: 300;
 }
@@ -360,6 +379,7 @@ textarea {
 
 .section-copy p:not(.eyebrow) {
   max-width: 520px;
+
   font-size: 14px;
 }
 
@@ -377,6 +397,7 @@ textarea {
 
 .image-architecture {
   background-image: url("concept.png.png");
+
   background-position: center;
 }
 
@@ -389,9 +410,11 @@ textarea {
   padding: 8px 15px;
 
   background: rgba(20, 20, 20, 0.55);
+
   color: #fff;
 
   font-family: "Playfair Display", serif;
+
   font-size: 22px;
   letter-spacing: 0.12em;
 
@@ -405,12 +428,14 @@ textarea {
 
 .dark {
   background: #292f2d;
+
   color: #f8f6f0;
 }
 
 .image-interior {
   background-image: url("interior.png.png");
-  background-position: center center;
+
+  background-position: center;
 }
 
 .spec-row {
@@ -429,8 +454,10 @@ textarea {
 
 .spec-row strong {
   font-family: "Playfair Display", serif;
+
   font-size: 42px;
   font-weight: 500;
+
   line-height: 1;
 }
 
@@ -449,11 +476,13 @@ textarea {
 .plan,
 .equipment {
   display: block;
+
   padding: 140px 8vw;
 }
 
 .section-heading {
   max-width: 720px;
+
   margin-bottom: 60px;
 }
 
@@ -468,26 +497,22 @@ textarea {
   gap: 28px;
 }
 
-
-/* PLAN CARD */
-
 .plan-card {
   display: block;
 
   width: 100%;
+
   padding: 0;
 
   border: 0;
   background: none;
 
   color: inherit;
+
   text-align: left;
 
   cursor: pointer;
 }
-
-
-/* PLAN IMAGE */
 
 .plan-card img {
   display: block;
@@ -513,9 +538,6 @@ textarea {
     0 18px 40px rgba(0, 0, 0, 0.10);
 }
 
-
-/* PLAN INFORMATION */
-
 .plan-info {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -527,6 +549,7 @@ textarea {
 
 .plan-info b {
   font-family: "Playfair Display", serif;
+
   font-size: 20px;
   font-weight: 500;
 }
@@ -571,6 +594,7 @@ textarea {
 
 .equipment-grid span {
   font-family: "Playfair Display", serif;
+
   font-size: 28px;
 }
 
@@ -590,67 +614,88 @@ textarea {
 
 .location {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
 
-  min-height: 650px;
-}
+  /*
+     左：マップ
+     右：LOCATION説明
+  */
+  grid-template-columns: 1.25fr 0.75fr;
 
-.location-map {
-  position: relative;
-
-  background: linear-gradient(
-    135deg,
-    #d9d5c9 0 15%,
-    #aeb4aa 15% 17%,
-    #e0ddd3 17% 35%,
-    #b8beb5 35% 37%,
-    #dedbd0 37% 60%,
-    #a9afa5 60% 62%,
-    #e0ddd3 62%
-  );
-}
-
-.location-map::after {
-  content: "";
-
-  position: absolute;
-  inset: 10%;
-
-  border: 1px dashed #6f766e;
-
-  transform: rotate(-7deg);
-}
-
-.map-pin {
-  position: absolute;
-  z-index: 1;
-
-  left: 50%;
-  top: 50%;
-
-  transform: translate(-50%, -50%);
-
-  padding: 14px 24px;
-
-  background: #252b28;
-  color: #fff;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-
-  text-align: center;
-
-  font-size: 10px;
-  letter-spacing: 0.18em;
-}
-
-.location-copy {
-  padding: 90px 8vw;
+  align-items: stretch;
 
   background: #f7f5f0;
 }
 
+
+/*
+   ★ 今回ここを大きく修正
+
+   location-map.png の比率に合わせて
+   地図表示エリアを作る。
+
+   昔のグラデーションマップは完全に撤去。
+*/
+
+.location-map {
+  position: relative;
+
+  width: 100%;
+
+  /*
+     生成したマップが横長なので
+     3:2に近い比率を維持する
+  */
+  aspect-ratio: 3 / 2;
+
+  min-height: 0;
+
+  background-image: url("location-map.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-color: #eeeae1;
+}
+
+
+/*
+   昔の点線マップ装飾を完全に消す
+*/
+
+.location-map::after {
+  content: none;
+  display: none;
+}
+
+
+/*
+   画像の中に物件位置が入っているので
+   HTML側の古いピンは非表示
+*/
+
+.map-pin {
+  display: none;
+}
+
+
+/* LOCATION TEXT */
+
+.location-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 70px 6vw;
+
+  background: #f7f5f0;
+}
+
+.location-copy > p:not(.eyebrow) {
+  font-size: 13px;
+}
+
 .location-copy ul {
-  margin: 40px 0 0;
+  margin: 35px 0 0;
   padding: 0;
 
   list-style: none;
@@ -659,13 +704,18 @@ textarea {
 .location-copy li {
   display: grid;
   grid-template-columns: 40px 1fr auto;
+
   align-items: center;
 
-  padding: 18px 0;
+  padding: 15px 0;
 
   border-top: 1px solid #ccc;
 
-  font-size: 13px;
+  font-size: 12px;
+}
+
+.location-copy li:last-child {
+  border-bottom: 1px solid #ccc;
 }
 
 .location-copy li span {
@@ -673,7 +723,7 @@ textarea {
 }
 
 .location-copy li small {
-  font-size: 10px;
+  font-size: 9px;
 }
 
 
@@ -730,6 +780,7 @@ textarea {
   width: 100%;
 
   margin-top: 7px;
+
   padding: 12px;
 
   border: 1px solid #bbb;
@@ -767,6 +818,7 @@ textarea {
   padding: 35px 5vw;
 
   background: #202522;
+
   color: #eee;
 }
 
@@ -804,6 +856,10 @@ textarea {
 
   width: min(680px, 100%);
 
+  max-height: 90vh;
+
+  overflow-y: auto;
+
   padding: 50px;
 
   background: #f7f5f0;
@@ -826,13 +882,27 @@ textarea {
 .modal-plan {
   position: relative;
 
-  min-height: 300px;
+  height: auto;
+  max-height: 70vh;
+
+  overflow-y: auto;
 
   margin: 20px 0;
+
+  padding: 15px;
 
   border: 1px solid #aaa;
 
   background: #fff;
+}
+
+.modal-plan-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
 }
 
 
@@ -850,11 +920,13 @@ textarea {
   padding: 13px 20px;
 
   background: #222;
+
   color: #fff;
 
   font-size: 12px;
 
   transform: translateY(100px);
+
   opacity: 0;
 
   transition: 0.3s;
@@ -862,6 +934,7 @@ textarea {
 
 .toast.show {
   transform: none;
+
   opacity: 1;
 }
 
@@ -871,6 +944,8 @@ textarea {
 ================================================== */
 
 @media (max-width: 800px) {
+
+  /* HEADER */
 
   .header {
     height: 65px;
@@ -893,6 +968,7 @@ textarea {
     padding: 25px 8vw;
 
     background: #f7f5f0;
+
     color: #222;
 
     flex-direction: column;
@@ -910,6 +986,7 @@ textarea {
 
   .hero {
     padding: 0 8vw;
+
     background-position: 58% center;
   }
 
@@ -926,10 +1003,9 @@ textarea {
   }
 
 
-  /* COMMON */
+  /* COMMON SECTION */
 
   .section,
-  .location,
   .contact {
     grid-template-columns: 1fr;
   }
@@ -943,11 +1019,14 @@ textarea {
   }
 
 
-  /* IMAGES */
+  /* CONCEPT */
 
   .image-architecture {
     background-position: 65% center;
   }
+
+
+  /* DESIGN */
 
   .image-interior {
     background-position: 48% center;
@@ -965,12 +1044,12 @@ textarea {
 
   .plans {
     grid-template-columns: 1fr;
+
     gap: 45px;
   }
 
   .plan-card img {
     height: auto;
-    max-height: none;
   }
 
 
@@ -983,12 +1062,24 @@ textarea {
 
   /* LOCATION */
 
-  .location-copy {
-    padding: 75px 8vw;
+  .location {
+    display: flex;
+    flex-direction: column;
   }
 
   .location-map {
-    min-height: 420px;
+    width: 100%;
+
+    aspect-ratio: 3 / 2;
+
+    min-height: 0;
+
+    background-size: contain;
+    background-position: center;
+  }
+
+  .location-copy {
+    padding: 75px 8vw;
   }
 
 
@@ -996,6 +1087,7 @@ textarea {
 
   .contact {
     gap: 50px;
+
     padding: 80px 8vw;
   }
 
@@ -1045,6 +1137,9 @@ textarea {
     font-size: 12px;
   }
 
+
+  /* SPECS */
+
   .spec-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1052,26 +1147,15 @@ textarea {
     gap: 30px;
   }
 
+
+  /* EQUIPMENT */
+
   .equipment-grid {
     grid-template-columns: 1fr;
   }
 
-  .cta-band {
-    padding: 90px 8vw;
-  }
 
-  .cta-band h2 {
-    font-size: 38px;
-  }
-
-  .location-copy li {
-    grid-template-columns: 32px 1fr;
-  }
-
-  .location-copy li small {
-    grid-column: 2;
-    margin-top: 3px;
-  }
+  /* PLAN */
 
   .plan,
   .equipment {
@@ -1086,115 +1170,39 @@ textarea {
   .plan-info span {
     font-size: 11px;
   }
-}
-/* ==================================================
-   PLAN MODAL IMAGE
-================================================== */
-
-.modal-plan {
-  height: auto;
-  max-height: 70vh;
-  overflow-y: auto;
-  padding: 15px;
-}
-
-.modal-plan-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-}
-/* ==================================================
-   LOCATION MAP IMAGE
-================================================== */
-
-.location-map {
-  min-height: 650px;
-
-  background-image: url("location-map.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* 今までの仮マップ装飾を消す */
-
-.location-map::after {
-  display: none;
-}
-
-/* 画像自体に物件名が入っているので
-   HTML側の黒いピン表示を非表示にする */
-
-.map-pin {
-  display: none;
-}
-
-/* ==================================================
-   LOCATION MAP SIZE FIX
-================================================== */
-
-.location-map {
-  min-height: 650px;
-
-  background-image: url("location-map.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  background-color: #f3f0e8;
-}
-
-.location-map::after {
-  display: none;
-}
-
-.map-pin {
-  display: none;
-}
 
 
-/* スマホ */
-
-@media (max-width: 800px) {
+  /* LOCATION */
 
   .location-map {
-    min-height: 500px;
+    width: 100%;
+
+    aspect-ratio: 3 / 2;
 
     background-size: contain;
     background-position: center;
-    background-repeat: no-repeat;
+
+    background-color: #eeeae1;
   }
 
-}
+  .location-copy li {
+    grid-template-columns: 32px 1fr;
+  }
 
-/* ==================================================
-   LOCATION MAP FINAL FIX
-================================================== */
+  .location-copy li small {
+    grid-column: 2;
 
-.location-map {
-  min-height: 650px !important;
+    margin-top: 3px;
+  }
 
-  background-image: url("location-map.png") !important;
-  background-size: contain !important;
-  background-position: center !important;
-  background-repeat: no-repeat !important;
 
-  background-color: #f3f0e8 !important;
-}
+  /* CTA */
 
-.location-map::after {
-  display: none !important;
-}
+  .cta-band {
+    padding: 90px 8vw;
+  }
 
-.map-pin {
-  display: none !important;
-}
-
-@media (max-width: 800px) {
-  .location-map {
-    min-height: 500px !important;
-    background-size: contain !important;
-    background-position: center !important;
+  .cta-band h2 {
+    font-size: 38px;
   }
 }
