@@ -1087,3 +1087,20 @@ textarea {
     font-size: 11px;
   }
 }
+/* ==================================================
+   PLAN MODAL IMAGE
+================================================== */
+
+.modal-plan {
+  height: auto;
+  max-height: 70vh;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.modal-plan-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
